@@ -25,10 +25,10 @@ let package = Package(
             name: "libheif",
             dependencies: ["libde265"],
             path: ".",
-            exclude: ["libheif/libheif/box_fuzzer.cc", "libheif/libheif/color_conversion_fuzzer.cc", "libheif/libheif/encoder_fuzzer.cc", "libheif/libheif/file_fuzzer.cc", "libheif/libheif/heif_encoder_x265.h", "libheif/libheif/heif_encoder_x265.cc", "libheif/libheif/heif_encoder_aom.h", "libheif/libheif/heif_encoder_aom.cc", "libheif/libheif/heif_decoder_aom.h", "libheif/libheif/heif_decoder_aom.cc", "libheif/libheif/heif_decoder_dav1d.h", "libheif/libheif/heif_decoder_dav1d.cc", "libheif/libheif/heif_encoder_rav1e.cc"],
+            exclude: ["libheif/libheif/box_fuzzer.cc", "libheif/libheif/color_conversion_fuzzer.cc", "libheif/libheif/encoder_fuzzer.cc", "libheif/libheif/file_fuzzer.cc", "libheif/libheif/heif_encoder_aom.h", "libheif/libheif/heif_encoder_aom.cc", "libheif/libheif/heif_decoder_aom.h", "libheif/libheif/heif_decoder_aom.cc", "libheif/libheif/heif_decoder_dav1d.h", "libheif/libheif/heif_decoder_dav1d.cc", "libheif/libheif/heif_encoder_rav1e.cc"],
             sources: ["libheif/libheif"],
             publicHeadersPath: "include",
-            cSettings: [.define("HAVE_UNISTD_H"), .define("HAVE_LIBDE265")]
+            cSettings: [.define("HAVE_UNISTD_H"), .define("HAVE_LIBDE265"), .define("HAVE_X265")]
         )
     ],
     cLanguageStandard: .gnu11,
